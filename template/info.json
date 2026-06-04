@@ -1,0 +1,19 @@
+{
+  "softwares": [
+    {
+      "name": "PixPen",
+      "icon": "/PixPen/icon.svg",
+      "github": "https://github.com/azulamb/PixPen",
+      "site": "/PixPen/",
+      "platform": ["windows"],
+      "description": "シンプルなお絵かきツール"
+    },
+    {
+      "name": "LineBrowsers",
+      "icon": "https://raw.githubusercontent.com/azulamb/LineBrowsers/refs/heads/main/resources/icon.svg",
+      "github": "https://github.com/azulamb/LineBrowsers",
+      "platform": ["windows"],
+      "description": "WebViewを横に並べる簡易ブラウザ"
+    }
+  ]
+}

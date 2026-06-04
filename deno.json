@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "convert": "deno run --allow-read --allow-write update.ts",
+    "update": {
+      "dependencies": ["convert"],
+      "command": "deno fmt"
+    }
+  },
+  "fmt": {
+    "include": ["./docs/", "./template/"],
+    "exclude": ["./docs/*.svg"]
+  }
+}
