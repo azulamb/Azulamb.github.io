@@ -3,12 +3,14 @@ import info from './template/info.json' with {type: 'json'};
 const template = Deno.readTextFileSync("template/index.html");
 const output = 'docs/index.html';
 
+type PLATFORM = 'windows' | 'linux' | 'android' | 'web';
+
 function renderSoftwareItem(item: {
   name: string;
   icon: string;
   github: string;
   site?: string;
-  platform: string[];
+  platform: PLATFORM[];
   description: string;
 }) {
   return `<li><article class="software-item">

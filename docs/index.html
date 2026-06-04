@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <title>AzuLamb</title>
-    <style type="text/css">
+    <style>
+      :root {
+        --main-back: #2a233b;
+        --main-front: #a1afc9;
+        --link-color: #3670db;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -15,13 +20,20 @@
       }
       body {
         height: 100%;
-        padding: 0;
-        margin: 0;
-        background: #2a233b;
-        color: #a1afc9;
+        background: var(--main-back);
+        color: var(--main-front);
         display: grid;
-        grid-template-rows: 2rem auto 1rem;
+        grid-template-rows: 4rem auto 1rem;
         gap: 1.2rem;
+      }
+      header {
+        box-sizing: border-box;
+        margin: 1rem 0 0;
+        background: url(./icon.svg) center center / contain no-repeat;
+      }
+      h1, h2 {
+        margin: 0;
+        padding: 0;
       }
       h1 {
         font-size: 1.5em;
@@ -37,9 +49,15 @@
       body > article {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         gap: 0.4rem;
-        width: 30rem;
+        width: 98%;
+        max-width: 30rem;
         margin: 0 auto;
+      }
+      body > article > * {
+        max-width: 100%;
       }
       footer {
         text-align: center;
@@ -49,7 +67,7 @@
         font-size: 0.6em;
       }
       a {
-        color: #3670db;
+        color: var(--link-color);
         text-decoration: none;
       }
       a:hover {
@@ -100,61 +118,55 @@
     </style>
   </head>
   <body>
-    <header>
-      <h1>AzuLamb</h1>
-    </header>
+    <header></header>
     <article>
+      <h1>AzuLamb</h1>
       <p>主に個人向けのアプリを作っています。</p>
       <h2>Link</h2>
       <ul class="links">
         <li><a href="https://github.com/azulamb">GitHub</a></li>
       </ul>
       <h2>Software</h2>
-      <section>
-        <ul class="software-list">
-          <li>
-            <article class="software-item">
-              <img src="/PixPen/icon.svg" alt="PixPen icon">
-              <h3><a href="/PixPen/">PixPen</a></h3>
-              <div>
-                <p>シンプルなお絵かきツール</p>
-                <ul class="platforms">
-                  <li class="platform" data-platform="windows">windows</li>
-                </ul>
-                <ul class="links">
-                  <li><a href="/PixPen/">Website</a></li>
-                  <li>
-                    <a href="https://github.com/azulamb/PixPen">GitHub</a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </li>
-          <li>
-            <article class="software-item">
-              <img
-                src="https://raw.githubusercontent.com/azulamb/LineBrowsers/refs/heads/main/resources/icon.svg"
-                alt="LineBrowsers icon"
-              >
-              <h3>
-                <a href="https://github.com/azulamb/LineBrowsers"
-                >LineBrowsers</a>
-              </h3>
-              <div>
-                <p>WebViewを横に並べる簡易ブラウザ</p>
-                <ul class="platforms">
-                  <li class="platform" data-platform="windows">windows</li>
-                </ul>
-                <ul class="links">
-                  <li>
-                    <a href="https://github.com/azulamb/LineBrowsers">GitHub</a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </li>
-        </ul>
-      </section>
+      <ul class="software-list">
+        <li>
+          <article class="software-item">
+            <img src="/PixPen/icon.svg" alt="PixPen icon">
+            <h3><a href="/PixPen/">PixPen</a></h3>
+            <div>
+              <p>シンプルなお絵かきツール</p>
+              <ul class="platforms">
+                <li class="platform" data-platform="windows">windows</li>
+              </ul>
+              <ul class="links">
+                <li><a href="/PixPen/">Website</a></li>
+                <li><a href="https://github.com/azulamb/PixPen">GitHub</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="software-item">
+            <img
+              src="https://raw.githubusercontent.com/azulamb/LineBrowsers/refs/heads/main/resources/icon.svg"
+              alt="LineBrowsers icon"
+            >
+            <h3>
+              <a href="https://github.com/azulamb/LineBrowsers">LineBrowsers</a>
+            </h3>
+            <div>
+              <p>WebViewを横に並べる簡易ブラウザ</p>
+              <ul class="platforms">
+                <li class="platform" data-platform="windows">windows</li>
+              </ul>
+              <ul class="links">
+                <li>
+                  <a href="https://github.com/azulamb/LineBrowsers">GitHub</a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ul>
     </article>
     <footer>
       <small>&copy; 2011 Hiroki</small>
